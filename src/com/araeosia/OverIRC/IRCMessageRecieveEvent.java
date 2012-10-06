@@ -21,10 +21,19 @@ public class IRCMessageRecieveEvent extends Event {
 	
 	/**
 	 * 
+	 * @return
 	 */
 	@Override
 	public HandlerList getHandlers() {
 		return handlers;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public static HandlerList getHandlerList() {
+	    return handlers;
 	}
 	
 	/**

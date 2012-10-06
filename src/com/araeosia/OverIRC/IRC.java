@@ -15,9 +15,8 @@ public class IRC {
 	 * @param channel
 	 * @param message
 	 */
-	public void sendMessage(String channel, String message) {
-		OverIRC overIRC = new OverIRC();
-		overIRC.sendIRCMessage(channel, message);
+	public static void sendMessage(String channel, String message) {
+		OverIRC.sendIRCMessage(channel, message);
 	}
 
 	/**
@@ -25,9 +24,16 @@ public class IRC {
 	 * 
 	 * @param message
 	 */
-	public void sendMessage(String message) {
-		OverIRC overIRC = new OverIRC();
-		overIRC.sendIRCMessage("all", message);
+	public static void sendMessage(String message) {
+		OverIRC.sendIRCMessage("all", message);
+	}
+	
+	/**
+	 * Send a raw message to the IRC server
+	 * @param message
+	 */
+	public static void sendRawMessage(String message){
+		OverIRC.sendRawIRCMessage(message);
 	}
 
 	/**
